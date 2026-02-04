@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FurFoods – Dashboard</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+  <div id="dashboardMainContainer">
+    <!-- Sidebar: same structure as partials/app-side.html -->
+    <div class="dashboard-sidebar" id="dashboardSidebar">
+      <h3 class="dashboard-logo" id="dashboardLogo">FurFoods</h3>
+      <div class="dashboard-sidebar-user">
+        <img src="images/ellahunt.png" id="userImage" alt="User">
+        <span>Ella</span>
+      </div>
+      <div class="dashboard-sidebar-menus">
+        <ul class="dashboard-menulists">
+          <li class="menuActive">
+            <a href="#dashboard" data-section="dashboard"><i class="fa fa-chart-line"></i> <span class="menuText">Dashboard</span></a>
+          </li>
+          <li>
+            <a href="#inventory" data-section="inventory"><i class="fa fa-box"></i> <span class="menuText">Inventory</span></a>
+          </li>
+          <li>
+            <a href="#sales" data-section="sales"><i class="fa fa-money-bill-1"></i> <span class="menuText menuText-salesReport">
+              <span class="menuText-line1">Sales & Payment</span>
+              <span class="menuText-line2">Report</span>
+            </span></a>
+          </li>
+          <li>
+            <a href="#pricing" data-section="pricing"><i class="fa fa-tag"></i> <span class="menuText">Product Price</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dashboard-content-container" id="dashboardContentContainer">
+      <!-- Top nav: same structure as partials/app-topnav.html -->
+      <div class="dashboard-top-navigation">
+        <a href="#" id="navigationBtn" aria-label="Toggle menu"><i class="fa fa-bars"></i></a>
+        <a href="#" id="logoutBtn"><i class="fa fa-power-off"></i> Log out</a>
+      </div>
+      <div class="dashboard-content">
+        <div class="dashboard-content-main" id="dashboardContentMain">
+          <h2>Dashboard Overview</h2>
+          <p>Welcome to FurFoods. Use the sidebar to switch sections.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/**
+ * Login page styles
+ * FurFoods – use when you add a login page
+ */
+
+body.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}

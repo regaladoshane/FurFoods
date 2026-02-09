@@ -1,0 +1,50 @@
+<div class="section-content section-stocklevel">
+  <h2>Product Monitoring</h2>
+  <p class="section-stocklevel-desc">Container levels from sensors. Connect via <strong>WiFi</strong> (recommended) or USB.</p>
+  <div class="stocklevel-connect-wrap">
+    <div class="stocklevel-wifi-wrap">
+      <label for="stocklevelEsp32Ip">ESP32 IP address (same WiFi as this device):</label>
+      <input type="text" id="stocklevelEsp32Ip" class="stocklevel-ip-input" placeholder="192.168.1.100" value="">
+      <button type="button" id="stocklevelWifiBtn" class="stocklevel-connect-btn stocklevel-wifi-btn">Connect via WiFi</button>
+      <span id="stocklevelWifiStatus" class="stocklevel-serial-status" aria-live="polite"></span>
+    </div>
+    <div class="stocklevel-serial-wrap">
+      <button type="button" id="stocklevelConnectBtn" class="stocklevel-connect-btn">Connect via USB (Serial)</button>
+      <span id="stocklevelSerialStatus" class="stocklevel-serial-status" aria-live="polite"></span>
+    </div>
+  </div>
+  <div class="stocklevel-containers" id="stocklevelContainers">
+    <!-- Container 1: FULL -->
+    <div class="stocklevel-card" id="container-1" data-container="1">
+      <h3 class="stocklevel-card-title">Container 1</h3>
+      <div class="stocklevel-jar-wrap">
+        <img id="container-1-img" class="stocklevel-jar-img" src="images/fulljar.png" alt="Container 1 level">
+      </div>
+      <p id="container-1-status" class="stocklevel-status stocklevel-status-full" data-status="full">FULL</p>
+    </div>
+    <!-- Container 2: RUNNING LOW -->
+    <div class="stocklevel-card" id="container-2" data-container="2">
+      <h3 class="stocklevel-card-title">Container 2</h3>
+      <div class="stocklevel-jar-wrap">
+        <img id="container-2-img" class="stocklevel-jar-img" src="images/lowjar.png" alt="Container 2 level">
+      </div>
+      <p id="container-2-status" class="stocklevel-status stocklevel-status-low" data-status="low">RUNNING LOW</p>
+    </div>
+    <!-- Container 3: FULL -->
+    <div class="stocklevel-card" id="container-3" data-container="3">
+      <h3 class="stocklevel-card-title">Container 3</h3>
+      <div class="stocklevel-jar-wrap">
+        <img id="container-3-img" class="stocklevel-jar-img" src="images/fulljar.png" alt="Container 3 level">
+      </div>
+      <p id="container-3-status" class="stocklevel-status stocklevel-status-full" data-status="full">FULL</p>
+    </div>
+    <!-- Container 4: EMPTY -->
+    <div class="stocklevel-card" id="container-4" data-container="4">
+      <h3 class="stocklevel-card-title">Container 4</h3>
+      <div class="stocklevel-jar-wrap">
+        <img id="container-4-img" class="stocklevel-jar-img" src="images/emptyjar.png" alt="Container 4 level">
+      </div>
+      <p id="container-4-status" class="stocklevel-status stocklevel-status-empty" data-status="empty">EMPTY</p>
+    </div>
+  </div>
+</div>

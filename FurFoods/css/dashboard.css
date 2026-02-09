@@ -1,0 +1,276 @@
+/**
+ * Dashboard layout, sidebar, and content styles
+ * FurFoods
+ */
+
+#dashboardMainContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-content-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  background-color: #6d3717;
+  overflow-x: hidden;
+  transition: width 0.3s;
+}
+
+.dashboard-logo {
+  color: white;
+  font-size: 1.875rem;
+  text-align: center;
+  height: 5px;
+  transition: font-size 0.3s;
+}
+
+.dashboard-sidebar-user {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+}
+
+.dashboard-sidebar-user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #dd8957;
+  object-fit: cover;
+  transition: width 0.3s, height 0.3s;
+}
+
+.dashboard-sidebar-user span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.dashboard-sidebar-menus {
+  flex: 1;
+  padding-top: 20px;
+  background-color: #dd8957;
+}
+
+.dashboard-menulists {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.dashboard-menulists {
+  margin-top: 0;
+}
+
+ul.dashboard-menulists li {
+  padding: 0;
+  text-transform: uppercase;
+  color: white;
+}
+
+ul.dashboard-menulists li a {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 100%;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  box-sizing: border-box;
+}
+
+ul.dashboard-menulists li a i {
+  font-size: 25px;
+}
+
+.menuText-salesReport .menuText-line1,
+.menuText-salesReport .menuText-line2 {
+  display: block;
+}
+
+.menuText-salesReport .menuText-line2 {
+  text-align: center;
+}
+
+ul.dashboard-menulists li:hover {
+  background: #ab6e4f;
+  color: white;
+}
+
+ul.dashboard-menulists li.menuActive {
+  background: #ab6e4f;
+  color: white;
+  transition: 0.3s all;
+}
+
+/* Top navigation */
+.dashboard-top-navigation {
+  background-color: #6d3717;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-top-navigation a {
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.dashboard-top-navigation a#logoutBtn {
+  margin-left: auto;
+}
+
+/* Main content area */
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  padding: 30px 10px 15px 10px;
+  min-height: 0;
+}
+
+.dashboard-content-main {
+  background: #999999;
+  flex: 1;
+  min-height: 0;
+  padding: 1rem;
+}
+
+/* Product Monitoring (Stock Level) */
+.section-stocklevel {
+  color: #fff;
+}
+.section-stocklevel h2 {
+  margin-top: 0;
+  color: #fff;
+}
+.section-stocklevel-desc {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.stocklevel-connect-wrap {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.stocklevel-wifi-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.stocklevel-wifi-wrap label {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+}
+.stocklevel-ip-input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  width: 12rem;
+  max-width: 100%;
+  border: 2px solid #dd8957;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.95);
+}
+.stocklevel-wifi-btn.connected {
+  background: #22c55e;
+  border-color: #16a34a;
+}
+.stocklevel-serial-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.stocklevel-connect-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #6d3717;
+  border: 2px solid #dd8957;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.stocklevel-connect-btn:hover {
+  background: #8b4513;
+}
+.stocklevel-connect-btn.connected {
+  background: #22c55e;
+  border-color: #16a34a;
+}
+.stocklevel-serial-status {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+.stocklevel-containers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+.stocklevel-card {
+  flex: 0 1 200px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 3px solid #a67c52;
+  border-right: 3px solid #7b5b9e;
+}
+.stocklevel-card-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: none;
+}
+.stocklevel-jar-wrap {
+  width: 140px;
+  height: 140px;
+  background: #b0b0b0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+.stocklevel-jar-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.stocklevel-status {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.stocklevel-status-full {
+  color: #22c55e;
+}
+.stocklevel-status-low {
+  color: #eab308;
+}
+.stocklevel-status-empty {
+  color: #ef4444;
+}
